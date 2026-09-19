@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Metro" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.example.Project1_Metro_BE.Project1MetroBeApplication" />
+    <module name="Project1_Metro_BE" />
+    <option name="VM_PARAMETERS" value="-Duser.timezone=Asia/Ho_Chi_Minh" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

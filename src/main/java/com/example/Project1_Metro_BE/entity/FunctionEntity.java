@@ -6,28 +6,23 @@ import lombok.*;
 import java.util.List;
 
 @Entity
-@Table(name = "role")
+@Table(name = "functions")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Role {
+public class FunctionEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "name_role", nullable = false, unique = true, length = 100)
-    private String nameRole;
+    @Column(name = "name_function", nullable = false, unique = true, length = 100)
+    private String nameFunction;
 
-    @OneToMany(mappedBy = "role", fetch = FetchType.LAZY)
-    @ToString.Exclude
-    @EqualsAndHashCode.Exclude
-    private List<Users> users;
-
-    @OneToMany(mappedBy = "role", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "functionEntity", fetch = FetchType.LAZY)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private List<Permission> permissions;
